@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="grid-container"> 
+ <div class="body">
+   <header id="desserts">
+    Desserts
+   </header>
+
+   <div class="product-section">
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-waffle-desktop.jpg" alt="desktop waffle image" />
+
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+
+        </div>
+      <p class="text">
+       <span class="dessert-text"> Waffle </span> <br>
+       <span class="dessert-flavour-text"> Waffle with Berries </span> <br>
+       <span class="dessert-price"> $6.50 </span>
+        
+      </p>
+      </div>
+        
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="desktop creme-brulee image" />
+         <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+         </div>
+      <p class="text">
+          <span class="dessert-text"> Crème Brûlée </span> <br>
+          <span class="dessert-flavour-text"> Vanilla Bean Crème Brûlée </span> <br>
+          <span class="dessert-price"> $7.00 </span>
+    
+      </p>   
+      </div>
+
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-macaron-desktop.jpg" alt="desktop macaron image"  />
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+         </div>
+      <p class="text">
+          <span class="dessert-text"> Macaron </span><br>
+          <span class="dessert-flavour-text"> Macaron Mix of Five </span><br>
+          <span class="dessert-price"> $8.00 </span>
+           
+      </p>
+      </div>
+
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-tiramisu-desktop.jpg" alt="desktop tiramisu image"  />
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+         </div>
+      <p class="text">
+          <span class="dessert-text"> Tiramisu </span><br>
+          <span class="dessert-flavour-text"> Classic Tiramisu </span><br>
+          <span class="dessert-price"> $5.50 </span>
+           
+      </p>
+      </div>
+
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-baklava-desktop.jpg" alt="desktop baklava image"  />
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+        </div>
+      <p class="text">
+          <span class="dessert-text"> Baklava </span><br>
+          <span class="dessert-flavour-text"> Pistachio Baklava </span><br>
+          <span class="dessert-price"> $4.00 </span>
+           
+      </p>
+      </div>
+
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-meringue-desktop.jpg" alt="desktop Meringue image"  />
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+        </div>
+      <p class="text">
+          <span class="dessert-text"> Pie </span><br>
+          <span class="dessert-flavour-text"> Lemon Meringue Pie </span><br>
+          <span class="dessert-price"> $5.00 </span>
+           
+      </p>
+      </div>
+
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-cake-desktop.jpg" alt="desktop Cake image"  />
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+        </div>
+      <p class="text">
+          <span class="dessert-text"> Cake </span><br>
+          <span class="dessert-flavour-text">  Red Velvet Cake </span><br>
+          <span class="dessert-price"> $4.50 </span>
+           
+      </p>
+      </div>
+
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-brownie-desktop.jpg" alt="desktop brownie image"  />
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+        </div>
+      <p class="text">
+          <span class="dessert-text"> Brownie </span><br>
+          <span class="dessert-flavour-text"> Salted Caramel Brownie </span><br>
+          <span class="dessert-price"> $4.50 </span>
+           
+      </p>  
+      </div>
+
+      <div class="product-item">
+        <div class="product-images"> 
+          <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="desktop panna cotta image"  />
+          <button class="cart-button"> 
+            <img class="addTocart" src="./assets/images/icon-add-to-cart.svg"/>
+             <span class="cart-text">Add to Cart</span> 
+             <span class="quantityCount"> 
+              <img class="decrementButton" src="/assets/images/icon-decrement-quantity.svg"/>
+              <span class="quantityValue">0</span> 
+              <img class="incrementButton" src="/assets/images/icon-increment-quantity.svg"/>
+            </span>
+          </button> 
+        </div>
+      <p class="text">
+          <span class="dessert-text"> Panna Cotta </span><br>
+          <span class="dessert-flavour-text"> Vanilla Panna Cotta </span><br>
+          <span class="dessert-price"> $6.50 </span>
+           
+      </p>
+      </div>
+   </div>
+
+
+  </div>
+  <div class="cart-container">
+     <div class="empty-cart">
+      <h2> Your Cart ( <span id="total-quantity-display">0</span> )</h2>
+      <div class="empty-design">
+        <img class="emptyCartImage" src="/assets/images/illustration-empty-cart.svg" alt="empty cart image"/>
+        <p>Your added items will appear here</p>
+      </div>
+      <div id="cart">
+        <div id="cart-items"></div>
+        <div id="grand-total"></div>
+        <button class="orderBtn" id="confirm-order">Confirm Order</button>
+
+      </div> 
+      
+      
+     </div>
+     
+
+  <!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </div>
+</div>
+
+<!-- Order Confirmation Modal -->
+<div id="order-modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="success-row">
+      <img src="./assets/images/icon-order-confirmed.svg" alt="success icon">
+      <h2>Order Confirmed</h2>
+    </div>
+    <div id="order-summary"></div>
+    <button id="start-new-order" class="orderBtn">Start New Order</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: hsl(20, 50%, 98%);
+width: 100%;
+height: 100%;
+}
+
+.grid-container {
+margin: 30px 0;
+display: flex;
+flex-direction: row;
+width: 100%;
+}
+
+.cart-container {
+width: 25%;
+margin-right: 5%;
+}
+
+.empty-cart {
+background-color: #fff;
+width: 100%;
+padding-left: 20px;
+}
+
+.empty-cart > h2 {
+color: hsl(14, 86%, 42%);
+padding-top: 20px;
+font-weight: 800;
+}
+
+.empty-design {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.body {
+margin: 30px 0px 30px 30px;
+width: 70%;
+}
+
+#desserts {
+color: hsl(14, 65%, 9%);
+font-weight: 700;
+font-size: 30px;
+margin-bottom: 30px;
+}
+
+.product-section {
+width: 100%;
+display: grid;
+grid-gap: 20px 5%;
+grid-template-columns: 27% 27% 27%;
+}
+
+.product-item {
+width: 100%;
+}
+  
+.product-images {
+width: 100%;
+position: relative;
+display: inline-block;
+}
+
+.product-images > img {
+border-radius: 20px;
+width: 100%;
+height: 252px;
+}
+
+.cart-button {
+position: absolute;
+bottom: 0;
+left: 50%;
+width: 150px;
+transform: translate(-50%, 50%);
+border-radius: 50px;
+padding: 10px 20px;
+font-size: 14px;
+background-color: white;
+border-color: hsl(14, 86%, 42%);
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+
+.cart-button:hover .cart-text,
+.cart-button:hover .addTocart {
+display: none;
+}
+
+.cart-button:hover {
+background-color: hsl(14, 86%, 42%);
+border: none;
+}
+
+.quantityCount {
+display: none;
+}
+
+.decrementButton,
+.incrementButton,
+.delete-button {
+height: 15px;
+width: 15px;
+padding: 4px;
+border-radius: 50%;
+transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.cart-button:hover .quantityCount {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+}
+
+.decrementButton,
+.incrementButton {
+height: 20px;
+width: 20px;
+}
+
+.addTocart {
+height: 20px;
+width: 20px;
+margin-right: 5px;
+}
+
+.product-item > .text {
+margin-top: 35px;
+}
+
+.dessert-text {
+color: hsl(14, 25%, 72%);
+font-weight: 100;
+}
+
+.cart-button.active {
+background-color: hsl(14, 86%, 42%);
+border: none;
+color: white;
+}
+
+.cart-button:hover .incrementButton,
+.cart-button:hover .decrementButton,
+.cart-button.active .incrementButton,
+.cart-button.active .decrementButton {
+border: 1.5px solid white;
+background-color: transparent;
+cursor: pointer;
+}
+
+.cart-button.active .cart-text,
+.cart-button.active .addTocart {
+display: none !important;
+}
+
+.cart-button.active .quantityCount {
+display: inline-flex !important;
+align-items: center;
+justify-content: center;
+gap: 30px;
+}
+
+.cart-button.active .incrementButton,
+.cart-button.active .decrementButton {
+filter: brightness(0) invert(1);
+}
+
+#grand-total {
+font-size: 20px;
+margin-top: 20px;
+display: flex;
+justify-content: space-between;
+padding: 0 10px;
+}
+
+.modal.hidden {
+display: none;
+}
+
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(10, 10, 10, 0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 999;
+}
+
+.modal-content {
+background-color: white;
+padding: 30px;
+border-radius: 12px;
+width: 90%;
+max-width: 500px;
+}
+
+.modal-content > .modal-header {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.modal-content > .modal-header h2 {
+margin: 0;
+font-size: 22px;
+font-weight: 700;
+}
+
+.success-icon {
+width: 50px;
+height: auto;
+}
+
+#order-summary > div {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 15px;
+}
+
+#order-summary img {
+width: 40px;
+height: auto;
+border-radius: 5px;
+}
+
+.modal-total {
+font-weight: bold;
+font-size: 18px;
+margin-bottom: 20px;
+}
+
+.orderBtn {
+width: 90%;
+background-color: hsl(14, 86%, 42%);
+padding: 10px 20px;
+border: none;
+border-radius: 50px;
+font-size: 20px;
+margin: 20px 0;
+color: white;
+cursor: pointer;
+}
+
+.cart-button:hover .cart-text,
+.cart-button:hover .addTocart {
+display: none;
+}
+
+.cart-button:hover .quantityCount {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+}
+
+/* Force cart button to activate hover style right away after reset */
+.cart-button.reset-hover .cart-text,
+.cart-button.reset-hover .addTocart {
+display: none !important;
+}
+.cart-button.reset-hover .quantityCount {
+display: inline-flex !important;
+}
+
+@media screen and (max-width: 440px) {
+.grid-container {
+flex-direction: column;
+padding: 20px;
+margin: 0;
+}
+
+.body {
+width: 100%;
+margin: 0;
+}
+
+.product-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.product-item {
+    width: 100%;
+}
+
+.product-images > img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.cart-button {
+    position: static;
+    transform: none;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-container {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.empty-cart {
+    padding: 20px;
+    text-align: center;
+}
+
+.empty-cart h2 {
+    font-size: 20px;
+}
+
+.emptyCartImage {
+    width: 80px;
+    margin: 10px auto;
+}
+
+.cart-item > div {
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+
+#grand-total {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.orderBtn {
+    font-size: 16px;
+}
+.modal {
+    align-items: flex-start;
+    padding-top: 70px;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: calc(100vh - 70px);
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
+  }
+
+  #order-summary > div {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #order-modal .orderBtn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .success-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .success-row img {
+    width: 30px;
+    height: auto;
+  }
+
+  .success-row h2 {
+    font-size: 20px;
+  }
+}
